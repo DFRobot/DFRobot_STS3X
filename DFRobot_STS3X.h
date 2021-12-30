@@ -58,10 +58,10 @@
 #define STS3X_CMD_MEA_PER_10HZ_MED         0x21
 #define STS3X_CMD_MEA_PER_10HZ_LOW         0x2A
 
-// MSB of the command to read period data
+// MSB bits of the command to read data in periodic measurement mode
 #define STS3X_CMD_READ_FETCH_DATA          0xE0
 
-// The command to stop sensor operation and make sensor enter into idle status
+// The command to stop sensor working and force it enter into idle status
 #define STS3X_CMD_BREAK_MSB                0x30
 #define STS3X_CMD_BREAK_LSB                0x93
 
@@ -147,7 +147,7 @@ public:
 
     /**
      * @fn setStretch
-     * @brief Set clock stretching. After enabling clock stretching, the sensor won’t send NAK when the measurement is done; it won’t send data to implement the unfinished measurement command until the measurement is done.
+     * @brief Set clock stretching. After enabling clock stretching, it won’t send NAK when the measurement is not done; it will send data to complete the unfinished measurement command until the measurement is done.
      * @param clockStretch: Whether to turn on clock stretching, true for on, false for off
      * @return None
      */
@@ -155,7 +155,7 @@ public:
 
     /**
      * @fn setFreq
-     * @brief Set measurement frequency, enable period measurement mode of the sensor (set measurement frequency is equivalently to send the command of enabling period measurement mode)
+     * @brief Set measurement frequency, enable period measurement mode of the sensor (set measurement frequency is equivalent to send the command of enabling period measurement mode)
      * @param freq: Select e2S, e1Hz, e2Hz, e4Hz and e10Hz mode in the enumeration variable eFreq_t
      * @return None
      */
@@ -222,12 +222,12 @@ public:
     bool systemResetDetected(void);
 
     /**
-     * @fn heaterStatus
+     * @fn tempTrackingAlert
      * @brief Temp tracking alert
      * @return true: no alert
      * @n      false: alert
      */
-    bool temTrackingAlert(void);
+    bool tempTrackingAlert(void);
 
     /**
      * @fn heaterStatus
@@ -309,7 +309,7 @@ private:
     uint8_t _deviceAddr;
     uint8_t _repeat;
     uint8_t _stretch;
-    uint8_t _freq;
+    eFreq_t _freq;
     uint16_t _status;
 };
 

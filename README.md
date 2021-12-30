@@ -1,15 +1,7 @@
 # DFRobot_STS3X
 * [中文版](./README_CN.md)
 
-High-Accuracy Digital Temperature Sensor IC
-Fully calibrated and linearized digital output
-Wide supply voltage range, from 2.15 V to 5.5 V 
-I2C Interface with communication speeds up to 1 
-MHz and two user selectable addresses
-Accuracy of up to 0.1 °C
-Very fast start-up and measurement time 
-Tiny 8-pin DFN package
-NIST traceability
+This High-Accuracy Digital Temperature Sensor has fully-calibrated and linearized digital output and wide supply voltage range from 2.15V to 5.5V. It offers a temperature accuracy of ± 0.1 C°. Its functionality includes enhanced signal processing, two distinctive and user-selectable I2C addresses, communication speeds of up to 1MHz, very fast start-up and measurement time, small 8pin DFN package and NIST traceability.
 
 ![产品实物图](./resources/images/STS35.png)
 
@@ -62,7 +54,7 @@ Download the library file before use, paste it into the \Arduino\libraries direc
 
   /**
    * @fn setStretch
-   * @brief Set clock stretching. After enabling clock stretching, the sensor won’t send NAK when the measurement is done; it won’t send data to complete the unfinished measurement command until the measurement is done.
+   * @brief Set clock stretching. After enabling clock stretching, it won’t send NAK when the measurement is not done; it will send data to complete the unfinished measurement command until the measurement is done.
    * @param clockStretch: Whether to turn on clock stretching, true for on, false for off
    * @return None
    */
@@ -70,7 +62,7 @@ Download the library file before use, paste it into the \Arduino\libraries direc
 
   /**
    * @fn setFreq
-   * @brief Set measurement frequency, enable period measurement mode of the sensor (set measurement frequency is equivalently to send the command of enabling period measurement mode)
+   * @brief Set measurement frequency, enable period measurement mode of the sensor (set measurement frequency is equivalent to send the command of enabling period measurement mode)
    * @param freq: Select e2S, e1Hz, e2Hz, e4Hz and e10Hz mode in the enumeration variable eFreq_t
    * @return None
    */
@@ -78,14 +70,14 @@ Download the library file before use, paste it into the \Arduino\libraries direc
 
   /**
    * @fn setHeaterOn
-   * @brief Set the heater on
+   * @brief Turn on the heater 
    * @return None
    */
   void setHeaterOn(void);
 
   /**
    * @fn setHeaterOff
-   * @brief Set the heater off
+   * @brief Turn off the heater 
    * @return None
    */
   void setHeaterOff(void);
@@ -99,7 +91,7 @@ Download the library file before use, paste it into the \Arduino\libraries direc
 
   /**
    * @fn resetSensor
-   * @brief Reset the sensor
+   * @brief Reset setting to default 
    * @return None
    */
   void resetSensor(void);
@@ -107,7 +99,7 @@ Download the library file before use, paste it into the \Arduino\libraries direc
   /**
    * @fn getStatus
    * @brief Get and save the current status of sensor
-   * @n Every once in a while, you need to call the interface before using other api to get the current status of the sensor
+   * @n Every once in a while, you need to call this interface before using other API to get the current status of the sensor
    * @return None
    */
   void getStatus(void);
@@ -137,12 +129,12 @@ Download the library file before use, paste it into the \Arduino\libraries direc
   bool systemResetDetected(void);
 
   /**
-   * @fn heaterStatus
+   * @fn tempTrackingAlert
    * @brief Temp tracking alert
    * @return true: no alert
    * @n      false: alert
    */
-  bool temTrackingAlert(void);
+  bool tempTrackingAlert(void);
 
   /**
    * @fn heaterStatus
@@ -162,14 +154,14 @@ Download the library file before use, paste it into the \Arduino\libraries direc
 
   /**
    * @fn getTemperatureSingleC
-   * @brief Under single measurement mode, get the current temp, note: ensure the sensor is in idle mode by calling related api: breakSensor()
+   * @brief Under single measurement mode, get the current temp, note: ensure the sensor is in idle mode, calling related api: breakSensor()
    * @return The measured temp data under single measurement mode, unit: ℃
    */
   float  getTemperatureSingleC(void);
 
   /**
    * @fn getTemperaturePeriodC
-   * @brief Under period measurement mode, get the current temp, note: set the sampling frequency in advance by calling related api: setFreq(eFreq_t freq)
+   * @brief Under period measurement mode, get the current temp, note: set the sampling frequency in advance, calling related api: setFreq(eFreq_t freq)
    * @return The measured temp data under period measurement mode, unit: ℃
    */
   float getTemperaturePeriodC(void);
@@ -191,6 +183,7 @@ Micro:bit          |      √       |              |             |
 ## History
 
 - 2021/09/01 - Version 1.0.0 released.
+- 2021/12/30 - Version 1.0.1 released.
 
 
 ## Credits

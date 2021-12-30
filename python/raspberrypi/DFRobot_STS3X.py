@@ -166,7 +166,7 @@ class DFRobot_STS3X(object):
     def set_repeat(self, repeat=REPEAT_LOW):
         '''!
            @brief Set repeat mode
-           @n The repeatability setting influences the measurement duration and thus the overall energy consumption of the sensor.
+           @n The repeat setting will affect the measurement duration and thereby impact the overall energy consumption of the sensor.
            @param repeat Repeat measurement config mode, there are three modes: REPEAT_HIGH, REPEAT_MEDIUM, REPEAT_LOW
         '''
         self._repeat = repeat

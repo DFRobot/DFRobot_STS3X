@@ -1,6 +1,6 @@
 /*!
  * @file getTemperature.ino
- * @brief Enable period measurement mode of the sensor (set measurement frequency is equivalently to send the command of enabling period measurement mode)
+ * @brief Enable period measurement mode of the sensor (set measurement frequency is equivalent to send the command of enabling period measurement mode)
  * @n Get the measured temp data of the sensor under period measurement mode
  * @copyright  Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
  * @license  The MIT License (MIT)

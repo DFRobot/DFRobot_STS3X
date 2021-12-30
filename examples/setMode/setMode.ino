@@ -35,13 +35,13 @@ void setup(void)
     sts.setRepeat(sts.eHigh);
 
     /**
-     * Set clock stretching. After enabling clock stretching, the sensor won’t send NAK when the measurement is done; it won’t send data to implement the unfinished measurement command until the measurement is done.
+     * Set clock stretching. After enabling clock stretching, it won’t send NAK when the measurement is not done; it will send data to complete the unfinished measurement command until the measurement is done.
      * clockStretch: Whether to turn on clock stretching, true for on, false for off
      */
     sts.setStretch(true);
 
     /**
-     * Turn on or off the heater, raise the sensor temp for easy internal test
+     * Turn on or off the heater, increase the sensor temp for easy internal test
      */
     sts.setHeaterOn();
     //sts.setHeaterOff();

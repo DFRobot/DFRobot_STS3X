@@ -137,12 +137,12 @@ NIST可追溯性。
   bool systemResetDetected(void);
 
   /**
-   * @fn heaterStatus
+   * @fn tempTrackingAlert
    * @brief 温度跟踪提醒
    * @return true: no alert
    * @n      false: alert
    */
-  bool temTrackingAlert(void);
+  bool tempTrackingAlert(void);
 
   /**
    * @fn heaterStatus
@@ -191,6 +191,7 @@ Micro:bit          |      √       |              |             |
 ## 历史
 
 - 2021/09/01 - 1.0.0 版本
+- 2021/12/30 - 1.0.1 版本
 
 
 ## 创作者

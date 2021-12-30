@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*
 '''
   # @file  get_sensor_status.py
-  # @brief  Configure relevant parameters of the sensor and single read the measured data
+  # @brief  Configure relevant parameters of the sensor and read the measured data in single measurement mode
   # @copyright  Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
   # @license  The MIT License (MIT)
   # @author  [qsjhyy](yihuan.huang@dfrobot.com)
@@ -28,7 +28,7 @@ def setup():
 
   '''
     # Set repeat mode
-    # The repeatability setting influences the measurement duration and thus the overall energy consumption of the sensor
+    # The repeat setting will affect the measurement duration and thereby impact the overall energy consumption of the sensor
     # repeat, Repeat measurement config mode, there are three modes: REPEAT_HIGH, REPEAT_MEDIUM, REPEAT_LOW
   '''
   sensor.set_repeat(sensor.REPEAT_LOW)
@@ -40,7 +40,7 @@ def setup():
   sensor.set_heater_off()
 
   '''
-    # Break the ongoing work of the sensor, make it enter into idle mode to wait the next command. Single measurement requires the sensor to be in idle status.
+    # Break off the ongoing work of the sensor to force it enter idle mode to wait the next command. Single measurement requires the sensor to be in idle status.
   '''
   sensor.sensor_break()
 

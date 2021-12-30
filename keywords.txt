@@ -24,7 +24,7 @@ getStatus	KEYWORD2
 checkSumStatus	KEYWORD2
 commandStatus	KEYWORD2
 systemResetDetected	KEYWORD2
-temTrackingAlert	KEYWORD2
+tempTrackingAlert	KEYWORD2
 heaterStatus	KEYWORD2
 alertPendingStatus	KEYWORD2
 getTemperatureSingleC	KEYWORD2

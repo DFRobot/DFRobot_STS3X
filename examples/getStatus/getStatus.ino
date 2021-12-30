@@ -70,7 +70,7 @@ void setup(void)
      *  true: no alert
      *  false: alert
      */
-    if(sts.temTrackingAlert() == true)
+    if(sts.tempTrackingAlert() == true)
         Serial.println("temperature have not been alerted");
     else
         Serial.println("temperature have been alerted");

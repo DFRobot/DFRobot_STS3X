@@ -190,7 +190,7 @@ float DFRobot_STS3X::getTemperatureSingleC(){
 }
 
 float DFRobot_STS3X::getTemperaturePeriodC(){
-    uint8_t cmd[2] = {0xE0,0x00};
+    uint8_t cmd[2] = {STS3X_CMD_READ_FETCH_DATA,0x00};
     writeCommand(cmd, 2);
     float result = 0.0;
     uint8_t buf[3];
@@ -298,7 +298,7 @@ bool DFRobot_STS3X::systemResetDetected(){
         return false;
 }
 
-bool DFRobot_STS3X::temTrackingAlert(){
+bool DFRobot_STS3X::tempTrackingAlert(){
     if ((_status & 0x0400) == 0)
         return true;
     else

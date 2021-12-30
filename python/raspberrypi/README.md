@@ -1,15 +1,7 @@
 # DFRobot_STS3X
 * [中文版](./README_CN.md)
 
-High-Accuracy Digital Temperature Sensor IC
-Fully calibrated and linearized digital output
-Wide supply voltage range, from 2.15 V to 5.5 V
-I2C Interface with communication speeds up to 1
-MHz and two user selectable addresses
-Accuracy of up to 0.1 °C
-Very fast start-up and measurement time 
-Tiny 8-pin DFN package
-NIST traceability
+This High-Accuracy Digital Temperature Sensor has fully-calibrated and linearized digital output and wide supply voltage range from 2.15V to 5.5V. It offers a temperature accuracy of ± 0.1 C°. Its functionality includes enhanced signal processing, two distinctive and user-selectable I2C addresses, communication speeds of up to 1MHz, very fast start-up and measurement time, small 8pin DFN package and NIST traceability.
 
 ![正反面svg效果图](../../resources/images/STS35.png)
 
@@ -51,7 +43,7 @@ Download the library file before use, paste it into the specified directory, the
 
     '''
        @brief Set repeat mode
-       @n The repeatability setting influences the measurement duration and thus the overall energy consumption of the sensor.
+       @n The repeat setting will affect the measurement duration and thereby impact the overall energy consumption of the sensor.
        @param repeat, Repeat measurement config mode, there are three modes: REPEAT_HIGH, REPEAT_MEDIUM, REPEAT_LOW
     '''
     def set_repeat(self, repeat=REPEAT_LOW)
@@ -63,17 +55,17 @@ Download the library file before use, paste it into the specified directory, the
     def set_freq(self,  freq=FREQ_1HZ)
 
     '''
-       @brief Set the heater on
+       @brief Turn the heater on
     '''
     def set_heater_on(self)
 
     '''
-       @brief Set the heater off
+       @brief Turn the heater off
     '''
     def set_heater_off(self)
 
     '''
-       @brief Break the ongoing work of the sensor to wait the next command
+       @brief Break off the ongoing work of the sensor to wait the next command
     '''
     def sensor_break(self)
 
@@ -84,28 +76,28 @@ Download the library file before use, paste it into the specified directory, the
 
     '''
        @brief Get and save all the current status of sensor
-       @n Every once in a while, you need to call the interface before using other api to get the current status of the sensor
+       @n Every once in a while, you need to call the interface before using other API to get the current status of the sensor
     '''
     def get_sensor_status(self)
 
     '''
        @brief Get checksum status
-       @return true: Writing checksum succeeds
-       @n      false: Writing checksum error
+       @return true: checksum of last write transfer is correct 
+       @n      false: checksum of last write transfer failed 
     '''
     def check_sum_status(self)
 
     '''
        @brief Get command status
-       @return true: The last command is implemented successfully.
-       @n      false: The last command is unhandled.
+       @return true: The last command is executed successfully.
+       @n      false: The last command is not processed.
     '''
     def command_status(self)
 
     '''
        @brief Detect whether the system is reset
-       @return true: The reset is not detected since the command to clear status register is sent.
-       @n      false: The reset is detected (hard and soft reset command or supply failed)
+       @return true: no reset detected since last 'clear status register' command.
+       @n      false: reset detected (hard and soft reset command or supply failed)
     '''
     def system_reset_detected(self)
 
@@ -166,6 +158,7 @@ Download the library file before use, paste it into the specified directory, the
 ## History
 
 - 2021/09/01 - Version 1.0.0 released.
+- 2021/12/30 - Version 1.0.1 released.
 
 
 ## Credits
