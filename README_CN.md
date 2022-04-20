@@ -14,7 +14,7 @@ NIST可追溯性。
 ![产品实物图](./resources/images/STS35.png)
 
 
-## 产品链接 (链接到英文商城)
+## 产品链接 (https://www.dfrobot.com.cn/goods-3476.html)
     SKU: SEN0434
 
 
@@ -192,8 +192,9 @@ Micro:bit          |      √       |              |             |
 
 - 2021/09/01 - 1.0.0 版本
 - 2021/12/30 - 1.0.1 版本
+- 2022/04/20 - 1.0.2 版本
 
 
 ## 创作者
 
-Written by(yufeng.luo@dfrobot.com), 2021. (Welcome to our [website](https://www.dfrobot.com/))
+Written by(yufeng.luo@dfrobot.com), 2022. (Welcome to our [website](https://www.dfrobot.com/))

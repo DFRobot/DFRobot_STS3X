@@ -13,8 +13,9 @@ NIST可追溯性。
 
 ![正反面svg效果图](../../resources/images/STS35.png)
 
-## 产品链接 (https://www.dfrobot.com/)
-    SKU：SEN0434
+
+## 产品链接 (https://www.dfrobot.com.cn/goods-3476.html)
+    SKU: SEN0434
 
 
 ## 目录
@@ -165,8 +166,9 @@ NIST可追溯性。
 
 - 2021/09/01 - 1.0.0 版本
 - 2021/12/30 - 1.0.1 版本
+- 2022/04/20 - 1.0.2 版本
 
 
 ## 创作者
 
-Written by qsjhyy(yihuan.huang@dfrobot.com), 2021. (Welcome to our [website](https://www.dfrobot.com/))
+Written by qsjhyy(yihuan.huang@dfrobot.com), 2022. (Welcome to our [website](https://www.dfrobot.com/))

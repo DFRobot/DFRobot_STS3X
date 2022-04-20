@@ -6,8 +6,8 @@ This High-Accuracy Digital Temperature Sensor has fully-calibrated and linearize
 ![产品实物图](./resources/images/STS35.png)
 
 
-## Product Link (链接到英文商城)
-    SKU：SEN0434
+## Product Link (https://www.dfrobot.com/product-2548.html)
+    SKU: SEN0434
 
 
 ## Table of Contents
@@ -184,11 +184,12 @@ Micro:bit          |      √       |              |             |
 
 - 2021/09/01 - Version 1.0.0 released.
 - 2021/12/30 - Version 1.0.1 released.
+- 2022/04/20 - Version 1.0.2 released.
 
 
 ## Credits
 
-Written by(yufeng.luo@dfrobot.com), 2021. (Welcome to our [website](https://www.dfrobot.com/))
+Written by(yufeng.luo@dfrobot.com), 2022. (Welcome to our [website](https://www.dfrobot.com/))
 
 
 
