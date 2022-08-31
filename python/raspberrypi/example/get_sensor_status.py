@@ -19,7 +19,7 @@ from DFRobot_STS3X import *
 # Determine I2C address according to the ADDR pin pull-up or pull-down
 # ADDR pin pull-down: STS3X_I2C_ADDRESS_A   0x4A
 # ADDR pin pull-up: STS3X_I2C_ADDRESS_B   0x4B
-sensor = DFRobot_STS3X(i2c_addr = STS3X_I2C_ADDRESS_A,bus = 1)
+sensor = DFRobot_STS3X(i2c_addr = STS3X_I2C_ADDRESS_B,bus = 1)
 
 def setup():
   sensor.begin()
